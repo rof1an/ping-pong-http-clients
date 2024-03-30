@@ -17,7 +17,7 @@ public class PingService {
             case "rest_template":
                 return restTemplateService.getPing(url);
             default:
-                throw new IllegalArgumentException("Invalid httpClient: " + httpClient);
+                return restTemplateService.getPing(url);
         }
     }
 }
